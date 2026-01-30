@@ -4,20 +4,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftAnnotation",
+    name: "AIAnnotation",
     platforms: [
         .iOS(.v16),
         .macOS(.v13)
     ],
     products: [
         .library(
-            name: "SwiftAnnotation",
-            targets: ["SwiftAnnotation"]
+            name: "AIAnnotation",
+            targets: ["AIAnnotation"]
         ),
     ],
     targets: [
         .target(
-            name: "SwiftAnnotation",
+            name: "AIAnnotation",
             dependencies: []
         ),
     ]

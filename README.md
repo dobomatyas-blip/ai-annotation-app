@@ -1,4 +1,4 @@
-# AI Annotation App
+# AI Annotation
 
 A SwiftUI debug overlay tool that enables visual annotation of UI components, generating structured markdown output for AI coding assistants like Claude Code, Cursor, and GitHub Copilot.
 
@@ -8,7 +8,7 @@ A SwiftUI debug overlay tool that enables visual annotation of UI components, ge
 
 ## Overview
 
-AI Annotation App bridges the gap between visual UI feedback and AI-powered code generation. Instead of describing UI elements in text, simply:
+AI Annotation bridges the gap between visual UI feedback and AI-powered code generation. Instead of describing UI elements in text, simply:
 
 1. **Activate** annotation mode in your app
 2. **Click** on any UI element to select it
@@ -16,15 +16,6 @@ AI Annotation App bridges the gap between visual UI feedback and AI-powered code
 4. **Paste** the generated markdown into your AI assistant
 
 The tool automatically captures element type, hierarchy path, accessibility identifiers, and frame coordinates - everything an AI needs to locate and modify the exact component.
-
-## Features
-
-- **Visual Element Selection**: Hover highlights and click-to-select any UI element
-- **Smart Element Detection**: Prioritizes elements with accessibility identifiers
-- **Annotation History**: Accumulate multiple annotations before copying
-- **Structured Markdown Output**: AI-optimized format with hierarchy paths
-- **Keyboard Shortcuts**: Enter to submit, ESC to close/exit
-- **Cross-Platform**: Works on macOS and iOS
 
 ## Installation
 
@@ -34,14 +25,26 @@ Add the following to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/dobomatyas-blip/ai-annotation-app.git", from: "1.0.0")
+    .package(url: "https://github.com/dobomatyas-blip/ai-annotation-app.git", branch: "main")
 ]
+```
+
+Then add `AIAnnotation` to your target dependencies:
+
+```swift
+.target(
+    name: "YourApp",
+    dependencies: [
+        .product(name: "AIAnnotation", package: "ai-annotation-app"),
+    ]
+)
 ```
 
 Or in Xcode:
 1. Go to **File > Add Package Dependencies...**
-2. Enter the repository URL
-3. Select your target
+2. Enter: `https://github.com/dobomatyas-blip/ai-annotation-app.git`
+3. Select "Branch" → `main`
+4. Add to your target
 
 ## Quick Start
 
@@ -49,7 +52,7 @@ Or in Xcode:
 
 ```swift
 import SwiftUI
-import SwiftAnnotation
+import AIAnnotation
 ```
 
 ### 2. Add the Annotation Overlay
@@ -89,6 +92,15 @@ struct ContentView: View {
 ### Feedback
 Change the button color to orange and add a subtle shadow.
 ```
+
+## Features
+
+- **Visual Element Selection**: Hover highlights and click-to-select any UI element
+- **Smart Element Detection**: Prioritizes elements with accessibility identifiers
+- **Annotation History**: Accumulate multiple annotations before copying
+- **Structured Markdown Output**: AI-optimized format with hierarchy paths
+- **Keyboard Shortcuts**: Enter to submit, ESC to close/exit
+- **Cross-Platform**: Works on macOS and iOS
 
 ## Best Practices
 
@@ -144,8 +156,9 @@ The generated markdown includes:
 ## Architecture
 
 ```
-SwiftAnnotation/
-├── Sources/SwiftAnnotation/
+AIAnnotation/
+├── Package.swift
+├── Sources/AIAnnotation/
 │   ├── SwiftAnnotation.swift      # Public API & view modifiers
 │   ├── AnnotationOverlay.swift    # Main overlay UI
 │   ├── AnnotationSheet.swift      # Feedback input sheet
@@ -173,3 +186,5 @@ MIT License - free to use, modify, and distribute with attribution. See [LICENSE
 ## Acknowledgments
 
 Inspired by [Agentation.dev](https://agentation.dev) for web applications.
+
+Built by [Endless Solutions](https://endlesssolutions.net)
