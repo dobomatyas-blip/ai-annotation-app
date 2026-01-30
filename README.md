@@ -34,7 +34,7 @@ Add the following to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/user/ai-annotation-app.git", from: "1.0.0")
+    .package(url: "https://github.com/dobomatyas-blip/ai-annotation-app.git", from: "1.0.0")
 ]
 ```
 
@@ -134,15 +134,6 @@ The generated markdown includes:
 - **Frame**: Position and size coordinates
 - **Depth**: How deep in the view hierarchy
 - **Your Feedback**: The change you want to make
-
-## Example Project
-
-The repository includes a `TestApp` demonstrating integration:
-
-```bash
-cd TestApp
-open TestApp.xcodeproj
-```
 
 ## Requirements
 

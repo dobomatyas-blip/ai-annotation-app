@@ -56,3 +56,6 @@ playground.xcworkspace
 
 # Archives
 *.xcarchive
+
+# Test App (local development only)
+TestApp/
