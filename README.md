@@ -4,7 +4,7 @@ A SwiftUI debug overlay tool that enables visual annotation of UI components, ge
 
 ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20iOS-blue)
 ![Swift](https://img.shields.io/badge/Swift-5.9+-orange)
-![License](https://img.shields.io/badge/license-MIT--0-green)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 ## Overview
 
@@ -177,7 +177,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-MIT-0 (MIT No Attribution) - completely free to use, modify, and distribute without any attribution required. See [LICENSE](LICENSE) for details.
+MIT License - free to use, modify, and distribute with attribution. See [LICENSE](LICENSE) for details.
 
 ## Acknowledgments
 
